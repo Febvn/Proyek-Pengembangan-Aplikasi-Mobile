@@ -106,11 +106,11 @@ kotlin {
 }
 
 android {
-    namespace = "com.example.noteai"
+    namespace = "com.itera.news"
     compileSdk = 35
     
     defaultConfig {
-        applicationId = "com.example.noteai"
+        applicationId = "com.itera.news"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -153,7 +153,7 @@ android {
 sqldelight {
     databases {
         create("NoteDatabase") {
-            packageName.set("com.example.noteai.data.local")
+            packageName.set("com.itera.news.data.local")
         }
     }
 }
