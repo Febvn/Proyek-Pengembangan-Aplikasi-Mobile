@@ -128,11 +128,7 @@ app/src/main/java/com/itera/news/
 
 ## Dokumen Terkait
 
-*   [Panduan Lengkap Cara Menjalankan](./docs/CARA_MENJALANKAN.md)
 *   [Rencana Project & Sprints](./docs/PROJECT_PLAN.md)
-*   [Penjelasan Arsitektur & Kode](./docs/STRUKTUR_KODE.md)
-*   [Git Branching & Workflows](./docs/GIT_WORKFLOW.md)
-*   [Pemecahan Masalah (Troubleshooting)](./docs/TROUBLESHOOTING.md)
 
 ---
 
