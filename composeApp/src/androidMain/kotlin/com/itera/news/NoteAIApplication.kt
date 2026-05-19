@@ -1,27 +1,21 @@
-package com.example.noteai
+package com.itera.news
 
 import android.app.Application
-import com.example.noteai.core.di.androidModule
-import com.example.noteai.core.di.initKoin
+import com.itera.news.core.di.platformModule
+import com.itera.news.core.di.sharedModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
+import org.koin.core.logger.Level
 
-/**
- * Android Application class
- * 
- * Entry point untuk inisialisasi app-wide dependencies.
- */
 class NoteAIApplication : Application() {
-    
     override fun onCreate() {
         super.onCreate()
         
-        // Initialize Koin DI
-        initKoin(
-            platformModules = listOf(androidModule)
-        ) {
-            androidLogger()
+        startKoin {
+            androidLogger(Level.DEBUG)
             androidContext(this@NoteAIApplication)
+            modules(sharedModule, platformModule)
         }
     }
 }

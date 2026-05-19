@@ -9,14 +9,23 @@ CREATE TABLE ArticleEntity (
 );
 
 insertArticle:
-INSERT OR REPLACE INTO ArticleEntity(url, title, description, imageUrl, publishedAt, sourceName, category)
-VALUES (?, ?, ?, ?, ?, ?, ?);
+INSERT OR REPLACE INTO ArticleEntity(
+    url, 
+    title, 
+    description, 
+    imageUrl, 
+    publishedAt, 
+    sourceName, 
+    category
+) VALUES(?, ?, ?, ?, ?, ?, ?);
 
 deleteArticle:
-DELETE FROM ArticleEntity WHERE url = ?;
+DELETE FROM ArticleEntity 
+WHERE url = ?;
 
 getAllBookmarkedArticles:
 SELECT * FROM ArticleEntity;
 
 isArticleBookmarked:
-SELECT count(*) FROM ArticleEntity WHERE url = ?;
+SELECT COUNT(*) FROM ArticleEntity 
+WHERE url = ?;

@@ -8,13 +8,12 @@ import com.itera.news.data.remote.api.NewsApi
 import com.itera.news.domain.model.Article
 import com.itera.news.domain.repository.NewsRepository
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
 class NewsRepositoryImpl(
     private val newsApi: NewsApi,
-    db: NewsDatabase
+    private val db: NewsDatabase
 ) : NewsRepository {
     
     private val queries = db.articleQueries
@@ -49,7 +48,7 @@ class NewsRepositoryImpl(
         return queries.getAllBookmarkedArticles()
             .asFlow()
             .mapToList(Dispatchers.IO)
-            .map { entities -> 
+            .map { entities ->
                 entities.map { entity ->
                     Article(
                         title = entity.title,

@@ -4,9 +4,11 @@ import android.content.Context
 import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.driver.android.AndroidSqliteDriver
 import com.itera.news.data.local.NewsDatabase
+import org.koin.java.KoinJavaComponent.getKoin
 
-actual class DatabaseDriverFactory(private val context: Context) {
+actual class DatabaseDriverFactory {
     actual fun createDriver(): SqlDriver {
-        return AndroidSqliteDriver(NewsDatabase.Schema, context, "news_db.db")
+        val context: Context = getKoin().get()
+        return AndroidSqliteDriver(NewsDatabase.Schema, context, "mbg_news.db")
     }
 }

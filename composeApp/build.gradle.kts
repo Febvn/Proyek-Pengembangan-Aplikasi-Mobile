@@ -152,7 +152,7 @@ android {
 
 sqldelight {
     databases {
-        create("NoteDatabase") {
+        create("NewsDatabase") {
             packageName.set("com.itera.news.data.local")
         }
     }

@@ -25,12 +25,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import coil.compose.AsyncImage
+// Import yang diperbaiki untuk KMP:
+import coil3.compose.AsyncImage
 import com.itera.news.domain.model.Article
 import com.itera.news.presentation.viewmodel.NewsUiState
 import com.itera.news.presentation.viewmodel.NewsViewModel
 import com.itera.news.ui.theme.neumorphicShadow
-import org.koin.androidx.compose.koinViewModel
+import org.koin.compose.viewmodel.koinViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
