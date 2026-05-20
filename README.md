@@ -1,3 +1,4 @@
+```markdown
 # News MBG - Premium Android News App with Gemini AI
 
 [![Android CI](https://github.com/Febvn/Proyek-Pengembangan-Aplikasi-Mobile/actions/workflows/android.yml/badge.svg)](https://github.com/Febvn/Proyek-Pengembangan-Aplikasi-Mobile/actions/workflows/android.yml)
@@ -17,8 +18,8 @@ Proyek ini dibuat untuk memenuhi tugas mata kuliah **Pengembangan Aplikasi Mobil
 
 1.  **Premium Neumorphic UI**: Desain antarmuka visual timbul-tenggelam yang memukau (Neumorphism) menggunakan Custom Compose Modifier. Dilengkapi dengan transisi Splash Screen yang halus, Search Bar neumorphic, Bottom Navigation bar melayang, serta efek Shimmer Loading yang presisi.
 2.  **Smart Gemini AI Integration**:
-    *   **Glowing Sentiment Indicators**: Analisis sentimen berita secara otomatis oleh AI (Positif = Hijau, Negatif = Merah, Netral = Abu-abu) dengan efek pendaran cahaya (glowing shadow) yang dinamis di halaman Detail.
-    *   **Pembaruan Kategori Cerdas**: Klasifikasi artikel berita ke dalam kategori yang sesuai berdasarkan analisis kontekstual teks.
+    * **Glowing Sentiment Indicators**: Analisis sentimen berita secara otomatis oleh AI (Positif = Hijau, Negatif = Merah, Netral = Abu-abu) dengan efek pendaran cahaya (glowing shadow) yang dinamis di halaman Detail.
+    * **Pembaruan Kategori Cerdas**: Klasifikasi artikel berita ke dalam kategori yang sesuai berdasarkan analisis kontekstual teks.
 3.  **Pencarian & Filter Kategori**: Telusuri berita favorit Anda secara instan menggunakan kata kunci dan filter kategori horizontal (All, Business, Technology, Science, Health).
 4.  **Caching Offline (Room Database)**: Menyimpan berita secara lokal sehingga Anda tetap dapat membaca berita yang telah dimuat sebelumnya tanpa koneksi internet.
 5.  **Clean Architecture & MVVM**: Pemisahan layer kode yang tegas (`data`, `domain`, `presentation`) untuk kemudahan pemeliharaan dan pengujian unit.
@@ -53,7 +54,9 @@ Berikut adalah tabel pemenuhan kriteria penilaian berdasarkan **Rubrik Penilaian
 
 Aplikasi dikelompokkan secara logis sesuai arsitektur Clean Architecture:
 
+
 ```
+
 app/src/main/java/com/itera/news/
 ├── data/                         # DATA LAYER (Data source, networking, DB)
 │   ├── local/                    # Room Database, DAOs, Entities
@@ -95,6 +98,7 @@ app/src/main/java/com/itera/news/
 │
 ├── MainActivity.kt               # Entrypoint Utama Aplikasi Android
 └── NewsApplication.kt            # Inisialisasi awal (Koin DI container setup)
+
 ```
 
 ---
@@ -103,7 +107,7 @@ app/src/main/java/com/itera/news/
 
 1.  **Kloning Repositori**:
     ```bash
-    git clone https://github.com/Febvn/Proyek-Pengembangan-Aplikasi-Mobile.git
+    git clone [https://github.com/Febvn/Proyek-Pengembangan-Aplikasi-Mobile.git](https://github.com/Febvn/Proyek-Pengembangan-Aplikasi-Mobile.git)
     cd Proyek-Pengembangan-Aplikasi-Mobile
     ```
 2.  **Buat Berkas local.properties**:
@@ -118,26 +122,25 @@ app/src/main/java/com/itera/news/
     ```
     *Catatan: Anda dapat memperoleh API Key gratis di Google AI Studio.*
 4.  **Buka di Android Studio**:
-    *   Gunakan versi Android Studio Ladybug (2024.2.1) atau lebih baru.
-    *   Lakukan Sync Project with Gradle Files dan biarkan dependencies terunduh otomatis.
+    * Gunakan versi Android Studio Ladybug (2024.2.1) atau lebih baru.
+    * Lakukan Sync Project with Gradle Files dan biarkan dependencies terunduh otomatis.
 5.  **Jalankan di Device/Emulator**:
-    *   Pilih run configuration app.
-    *   Klik tombol Run (ikon putar hijau) untuk mengompilasi dan memasang aplikasi ke emulator/device aktif Anda.
+    * Pilih run configuration app.
+    * Klik tombol Run (ikon putar hijau) untuk mengompilasi dan memasang aplikasi ke emulator/device aktif Anda.
 
 ---
 
 ## Dokumen Terkait
 
-*   [Panduan Lengkap Cara Menjalankan](./docs/CARA_MENJALANKAN.md)
-*   [Rencana Project & Sprints](./docs/PROJECT_PLAN.md)
-*   [Penjelasan Arsitektur & Kode](./docs/STRUKTUR_KODE.md)
-*   [Git Branching & Workflows](./docs/GIT_WORKFLOW.md)
-*   [Pemecahan Masalah (Troubleshooting)](./docs/TROUBLESHOOTING.md)
+* [Panduan Lengkap Cara Menjalankan](./docs/CARA_MENJALANKAN.md)
+* [Rencana Project & Sprints](./docs/PROJECT_PLAN.md)
+* [Penjelasan Arsitektur & Kode](./docs/STRUKTUR_KODE.md)
+* [Git Branching & Workflows](./docs/GIT_WORKFLOW.md)
+* [Pemecahan Masalah (Troubleshooting)](./docs/TROUBLESHOOTING.md)
 
 ---
 
 ## Dosen Pengampu
-*   Pak Habib (GitHub: mh4Scripts)
+* Pak Habib (GitHub: mh4Scripts)
 
-**Program Studi Teknik Informatika**  
-Institut Teknologi Sumatera (ITERA)
+**Program Studi Teknik Informatika** Institut Teknologi Sumatera (ITERA)
