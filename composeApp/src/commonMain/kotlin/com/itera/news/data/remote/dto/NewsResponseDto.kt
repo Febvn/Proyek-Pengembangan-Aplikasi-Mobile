@@ -6,9 +6,10 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class NewsResponseDto(
-    @SerialName("status") val status: String,
-    @SerialName("totalResults") val totalResults: Int,
-    @SerialName("articles") val articles: List<ArticleDto>
+    @SerialName("status") val status: String? = null,
+    @SerialName("totalResults") val totalResults: Int? = 0,
+    @SerialName("articles") val articles: List<ArticleDto>? = emptyList(),
+    @SerialName("message") val message: String? = null // Menangkap pesan error dari server
 )
 
 @Serializable

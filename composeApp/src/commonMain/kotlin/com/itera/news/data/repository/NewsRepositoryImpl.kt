@@ -21,7 +21,8 @@ class NewsRepositoryImpl(
     override suspend fun getMbgNews(query: String?): Result<List<Article>> {
         return try {
             val response = newsApi.getMbgNews(query)
-            val articles = response.articles.map { it.toDomain() }
+            // Gunakan safe call (?.) dan berikan fallback list kosong (?: emptyList())
+            val articles = response.articles?.map { it.toDomain() } ?: emptyList()
             Result.success(articles)
         } catch (e: Exception) {
             Result.failure(e)

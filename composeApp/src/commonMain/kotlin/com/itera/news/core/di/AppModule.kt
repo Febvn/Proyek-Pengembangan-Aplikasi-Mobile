@@ -6,12 +6,17 @@ import com.itera.news.data.repository.NewsRepositoryImpl
 import com.itera.news.domain.repository.NewsRepository
 import com.itera.news.domain.usecase.GetMbgNewsUseCase
 import org.koin.dsl.module
+import org.koin.compose.viewmodel.dsl.viewModel
+import com.itera.news.presentation.viewmodel.NewsViewModel
 
-const val NEWS_API_KEY = "YOUR_NEWSAPI_KEY_HERE"
+const val NEWS_API_KEY = "0faefcb90a144faf99a182e7ca3332d9"
 
 val sharedModule = module {
     single { createHttpClient() }
     single { NewsApi(get(), NEWS_API_KEY) }
     single<NewsRepository> { NewsRepositoryImpl(get(), get()) }
     single { GetMbgNewsUseCase(get()) }
+    
+    // Baris di bawah ini wajib ada untuk mencegah crash
+    viewModel { NewsViewModel(get(), get()) }
 }

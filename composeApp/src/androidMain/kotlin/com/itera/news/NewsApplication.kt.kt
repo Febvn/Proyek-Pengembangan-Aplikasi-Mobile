@@ -8,13 +8,13 @@ import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
 
-class NoteAIApplication : Application() {
+class NewsApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         
         startKoin {
             androidLogger(Level.DEBUG)
-            androidContext(this@NoteAIApplication)
+            androidContext(this@NewsApplication)
             modules(sharedModule, platformModule)
         }
     }
