@@ -29,3 +29,12 @@ SELECT * FROM ArticleEntity;
 isArticleBookmarked:
 SELECT COUNT(*) FROM ArticleEntity 
 WHERE url = ?;
+
+updateArticle:
+UPDATE ArticleEntity
+SET title = ?, description = ?, imageUrl = ?, publishedAt = ?, sourceName = ?, category = ?
+WHERE url = ?;
+
+getArticleByUrl:
+SELECT * FROM ArticleEntity
+WHERE url = ?;

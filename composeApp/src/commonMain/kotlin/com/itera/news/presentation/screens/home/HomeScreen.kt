@@ -1,4 +1,4 @@
-package com.itera.news.presentation.screen
+package com.itera.news.presentation.screens.home
 
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
@@ -28,15 +28,18 @@ import androidx.compose.ui.unit.sp
 // Import yang diperbaiki untuk KMP:
 import coil3.compose.AsyncImage
 import com.itera.news.domain.model.Article
-import com.itera.news.presentation.viewmodel.NewsUiState
-import com.itera.news.presentation.viewmodel.NewsViewModel
+
+
 import com.itera.news.ui.theme.neumorphicShadow
 import org.koin.compose.viewmodel.koinViewModel
+
+import androidx.compose.material.icons.filled.Bookmarks
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
     navigateToDetail: (String) -> Unit,
+    navigateToBookmark: () -> Unit,
     viewModel: NewsViewModel = koinViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -44,6 +47,15 @@ fun HomeScreen(
     val selectedCategory by viewModel.selectedCategory.collectAsState()
 
     Scaffold(
+        floatingActionButton = {
+            FloatingActionButton(
+                onClick = navigateToBookmark,
+                containerColor = MaterialTheme.colorScheme.primary,
+                contentColor = MaterialTheme.colorScheme.onPrimary
+            ) {
+                Icon(Icons.Default.Bookmarks, contentDescription = "Saved Articles")
+            }
+        },
         topBar = {
             Column(
                 modifier = Modifier

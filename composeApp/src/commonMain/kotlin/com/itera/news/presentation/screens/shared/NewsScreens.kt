@@ -1,4 +1,4 @@
-package com.itera.news.presentation.screen
+package com.itera.news.presentation.screens.shared
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

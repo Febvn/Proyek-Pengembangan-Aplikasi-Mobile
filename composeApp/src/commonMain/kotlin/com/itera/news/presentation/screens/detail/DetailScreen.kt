@@ -1,4 +1,4 @@
-package com.itera.news.presentation.screen
+package com.itera.news.presentation.screens.detail
 
 import android.webkit.WebView
 import android.webkit.WebViewClient

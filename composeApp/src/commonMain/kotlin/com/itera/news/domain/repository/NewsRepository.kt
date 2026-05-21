@@ -9,4 +9,6 @@ interface NewsRepository {
     suspend fun deleteArticle(article: Article)
     fun getBookmarkedArticles(): Flow<List<Article>>
     fun isArticleBookmarked(url: String): Flow<Boolean>
+    suspend fun updateArticle(article: Article)
+    fun getArticleByUrl(url: String): Flow<Article?>
 }

@@ -16,4 +16,15 @@ sealed class Screen(val route: String) {
             return "detail/$encodedUrl"
         }
     }
+
+    object AddEdit : Screen("addEdit?url={articleUrl}") {
+        fun createRoute(url: String? = null): String {
+            return if (url.isNullOrEmpty()) {
+                "addEdit"
+            } else {
+                val encodedUrl = URLEncoder.encode(url, StandardCharsets.UTF_8.toString())
+                "addEdit?url=$encodedUrl"
+            }
+        }
+    }
 }

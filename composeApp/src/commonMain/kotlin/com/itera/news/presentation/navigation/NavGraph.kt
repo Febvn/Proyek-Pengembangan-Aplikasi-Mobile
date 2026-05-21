@@ -11,8 +11,12 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.itera.news.presentation.screen.DetailScreen
-import com.itera.news.presentation.screen.HomeScreen
+import com.itera.news.presentation.screens.detail.DetailScreen
+import com.itera.news.presentation.screens.home.HomeScreen
+import com.itera.news.presentation.screens.bookmark.BookmarkScreen
+import com.itera.news.presentation.screens.add.AddEditScreen
+import java.net.URLDecoder
+import java.nio.charset.StandardCharsets
 
 @Composable
 fun NavGraph(navController: NavHostController) {
@@ -27,6 +31,9 @@ fun NavGraph(navController: NavHostController) {
             HomeScreen(
                 navigateToDetail = { url ->
                     navController.navigate(Screen.Detail.createRoute(url))
+                },
+                navigateToBookmark = {
+                    navController.navigate(Screen.Bookmark.route)
                 }
             )
         }
@@ -41,7 +48,31 @@ fun NavGraph(navController: NavHostController) {
             )
         }
         composable(Screen.Bookmark.route) {
-            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { Text("Bookmark Screen") }
+            BookmarkScreen(
+                onNavigateToDetail = { url ->
+                    navController.navigate(Screen.Detail.createRoute(url))
+                },
+                onNavigateToAddEdit = { url ->
+                    navController.navigate(Screen.AddEdit.createRoute(url))
+                }
+            )
+        }
+        composable(
+            route = Screen.AddEdit.route,
+            arguments = listOf(
+                navArgument("articleUrl") {
+                    type = NavType.StringType
+                    nullable = true
+                    defaultValue = null
+                }
+            )
+        ) { backStackEntry ->
+            val encodedUrl = backStackEntry.arguments?.getString("articleUrl")
+            val decodedUrl = encodedUrl?.let { URLDecoder.decode(it, StandardCharsets.UTF_8.toString()) }
+            AddEditScreen(
+                url = decodedUrl,
+                onNavigateBack = { navController.popBackStack() }
+            )
         }
         composable(Screen.About.route) {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { Text("About Screen") }

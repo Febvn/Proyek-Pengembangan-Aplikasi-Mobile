@@ -3,6 +3,7 @@ package com.itera.news.data.repository
 import app.cash.sqldelight.coroutines.asFlow
 import app.cash.sqldelight.coroutines.mapToList
 import app.cash.sqldelight.coroutines.mapToOne
+import app.cash.sqldelight.coroutines.mapToOneOrNull
 import com.itera.news.data.local.NewsDatabase
 import com.itera.news.data.remote.api.NewsApi
 import com.itera.news.domain.model.Article
@@ -69,5 +70,36 @@ class NewsRepositoryImpl(
             .asFlow()
             .mapToOne(Dispatchers.IO)
             .map { it > 0 }
+    }
+
+    override suspend fun updateArticle(article: Article) {
+        queries.updateArticle(
+            title = article.title,
+            description = article.description,
+            imageUrl = article.imageUrl,
+            publishedAt = article.publishedAt,
+            sourceName = article.sourceName,
+            category = article.category,
+            url = article.url
+        )
+    }
+
+    override fun getArticleByUrl(url: String): Flow<Article?> {
+        return queries.getArticleByUrl(url)
+            .asFlow()
+            .mapToOneOrNull(Dispatchers.IO)
+            .map { entity ->
+                entity?.let {
+                    Article(
+                        title = it.title,
+                        description = it.description,
+                        url = it.url,
+                        imageUrl = it.imageUrl,
+                        publishedAt = it.publishedAt,
+                        sourceName = it.sourceName,
+                        category = it.category
+                    )
+                }
+            }
     }
 }

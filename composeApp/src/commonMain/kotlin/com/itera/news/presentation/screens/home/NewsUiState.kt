@@ -1,4 +1,4 @@
-package com.itera.news.presentation.viewmodel
+package com.itera.news.presentation.screens.home
 
 import com.itera.news.domain.model.Article
 
