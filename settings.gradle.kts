@@ -16,7 +16,13 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google {
-            mavenContent {
-                includeGroupAndSub
+        google()
+        mavenCentral()
+    }
+}
+
+// WAJIB: Daftarkan modul yang ada di proyekmu
+include(":app")
+include(":composeApp")

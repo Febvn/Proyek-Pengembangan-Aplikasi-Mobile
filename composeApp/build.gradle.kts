@@ -107,11 +107,12 @@ kotlin {
 }
 
 android {
-    namespace = "com.itera.news"
+    // Ubah namespace agar tidak bentrok dengan app
+    namespace = "com.itera.news.composeapp" 
     compileSdk = 34
     
     defaultConfig {
-        applicationId = "com.itera.news"
+        applicationId = "com.itera.news.composeapp" // Ubah ID agar unik
         minSdk = 24
         targetSdk = 34
         versionCode = 1
