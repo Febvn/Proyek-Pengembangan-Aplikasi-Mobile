@@ -13,7 +13,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.Search
-import androidx.compose.material.icons.outlined.StarBorder
+import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -332,7 +332,7 @@ fun ArticleCard(
                             )
                     ) {
                         Icon(
-                            imageVector = if (isBookmarked) Icons.Filled.Star else Icons.Outlined.StarBorder,
+                            imageVector = if (isBookmarked) Icons.Filled.Star else Icons.Outlined.Star,
                             contentDescription = if (isBookmarked) "Hapus bookmark" else "Simpan bookmark",
                             tint = if (isBookmarked) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
                         )

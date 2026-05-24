@@ -11,7 +11,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.Star
-import androidx.compose.material.icons.outlined.StarBorder
+import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -74,7 +74,7 @@ fun DetailScreen(
                         }
                     ) {
                         Icon(
-                            imageVector = if (isBookmarked) Icons.Filled.Star else Icons.Outlined.StarBorder,
+                            imageVector = if (isBookmarked) Icons.Filled.Star else Icons.Outlined.Star,
                             contentDescription = if (isBookmarked) "Hapus bookmark" else "Simpan bookmark",
                             tint = if (isBookmarked) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
                         )
