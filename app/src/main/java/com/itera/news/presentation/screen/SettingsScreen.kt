@@ -6,7 +6,11 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.outlined.DarkMode
+import androidx.compose.material.icons.outlined.Code
+import androidx.compose.material.icons.outlined.Storage
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -62,7 +66,7 @@ fun SettingsScreen(
             
             item {
                 SettingsItem(
-                    icon = Icons.Default.DarkMode,
+                    icon = Icons.Outlined.DarkMode,
                     title = "Mode Gelap",
                     subtitle = "Aktifkan tema gelap",
                     trailing = {
@@ -110,7 +114,7 @@ fun SettingsScreen(
             
             item {
                 SettingsItem(
-                    icon = Icons.Default.Storage,
+                    icon = Icons.Outlined.Storage,
                     title = "Hapus Cache",
                     subtitle = "Bersihkan data cache aplikasi",
                     onClick = { showClearCacheDialog = true }
@@ -137,7 +141,7 @@ fun SettingsScreen(
             
             item {
                 SettingsItem(
-                    icon = Icons.Default.Code,
+                    icon = Icons.Outlined.Code,
                     title = "Lisensi Open Source",
                     subtitle = "Lihat lisensi library yang digunakan"
                 )
