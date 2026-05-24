@@ -4,13 +4,10 @@
 
 Aplikasi Android modern yang menampilkan berita tentang program Makan Bergizi Gratis (MBG) dengan analisis sentimen menggunakan Google Gemini AI.
 
-<<<<<<< HEAD
 ## 🎥 Video Demonstrasi
 
 📹 **[Tonton Video Demonstrasi Aplikasi Sprint 3 (Google Drive)](https://drive.google.com/file/d/1SvMglU0s4eJjarL3q4paNaf0LJ49YNi2/view?usp=sharing)**
 
-=======
->>>>>>> 9a9c6649318d1492878917390aec362d9b3000ff
 ## ✨ Fitur Sprint 3
 
 ### 🔍 Search & Filter
@@ -46,11 +43,7 @@ Aplikasi Android modern yang menampilkan berita tentang program Makan Bergizi Gr
 ## 🏗️ Arsitektur
 
 ### Clean Architecture (3 Layers)
-<<<<<<< HEAD
 ```text
-=======
-```
->>>>>>> 9a9c6649318d1492878917390aec362d9b3000ff
 ┌─────────────────────────────────────┐
 │      Presentation Layer             │
 │  (Compose UI + ViewModel)           │
@@ -61,7 +54,6 @@ Aplikasi Android modern yang menampilkan berita tentang program Makan Bergizi Gr
 │        Data Layer                   │
 │  (Room DB + Retrofit + Gemini AI)   │
 └─────────────────────────────────────┘
-<<<<<<< HEAD
 
 ```
 
