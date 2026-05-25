@@ -14,6 +14,56 @@ This project was developed to fulfill the assignments for the **Mobile Applicati
 
 ---
 
+## 📱 App Screenshots
+
+### Tampilan Awal - Home Screen
+![Tampilan Awal](./Screenshoot/Tampilan%20Awal.jpeg)
+
+**Home Screen** menampilkan daftar berita dengan fitur:
+- Real-time search dengan debounce
+- Filter kategori berita (Semua, Pro, Kontra, Netral)
+- Pull-to-refresh untuk memuat berita terbaru
+- Bookmark artikel langsung dari card
+- AI sentiment indicator dengan glowing shadow
+
+### Pencarian - Search Feature
+![Pencarian](./Screenshoot/Pencarian.jpeg)
+
+**Search Feature** memungkinkan pengguna:
+- Mencari berita secara real-time
+- Debounce 500ms untuk optimasi performa
+- Hasil pencarian langsung ditampilkan
+- Mendukung pencarian berdasarkan judul dan deskripsi
+
+### Berita Tersimpan - Bookmark Screen
+![Berita Tersimpan](./Screenshoot/Berita%20Tersimpan.jpeg)
+
+**Bookmark Screen** untuk menyimpan artikel favorit:
+- Daftar artikel yang disimpan
+- Hapus bookmark dengan satu klik
+- Navigasi ke detail artikel
+- Empty state yang informatif
+
+### Pengaturan - Settings Screen
+![Pengaturan](./Screenshoot/Pengaturan.jpeg)
+
+**Settings Screen** dengan berbagai opsi:
+- Toggle mode gelap (UI ready)
+- Toggle notifikasi
+- Hapus cache aplikasi
+- Informasi versi aplikasi
+
+### Sentiment Analysis - Kontra Category
+![Kontra](./Screenshoot/Kontra.jpeg)
+
+**AI-Powered Categorization** menunjukkan:
+- Berita dengan sentiment "Kontra"
+- Glowing indicator merah untuk identifikasi visual
+- Filter berdasarkan kategori (Pro/Kontra/Netral)
+- Gemini AI real-time analysis
+
+---
+
 ## Key Features
 
 1. **Premium Neumorphic UI**: A visually stunning interface utilizing Custom Compose Modifiers to create a sense of depth.
@@ -23,6 +73,54 @@ This project was developed to fulfill the assignments for the **Mobile Applicati
 3. **Search & Category Filtering**: Instant article search functionality and horizontal category filters (All, Business, Technology, Science, Health).
 4. **Local Data Management (CRUD)**: Create, Read, Update, and Delete custom articles locally using SQLDelight.
 5. **Clean Architecture & MVVM**: Strict separation of code layers (`data`, `domain`, `presentation`) ensuring high maintainability and testability.
+
+---
+
+## 🚀 Sprint 3: Advanced Features & Offline Support
+
+Sprint 3 focuses on advanced features, offline support, and enhanced user experience.
+
+| Component | Weight | Criteria | Status | Details |
+| :--- | :---: | :--- | :---: | :--- |
+| **Search/Filter** | 25% | Working search, responsive, good UX | **COMPLETED** | Real-time search with 500ms debounce, category filtering (Semua/Pro/Kontra/Netral) |
+| **API/Enhanced Local** | 25% | Proper integration, error handling | **COMPLETED** | Offline-first caching with Room, automatic cache on API success, graceful fallback |
+| **Offline Support** | 20% | App usable offline, graceful degradation | **COMPLETED** | Cached articles load automatically, works completely offline, clear error messages |
+| **Additional Screen** | 15% | Settings/Profile functional | **COMPLETED** | Complete Settings UI with dark mode toggle, notifications, cache management |
+| **Bonus Features** | 15% | At least 1 bonus implemented | **ACHIEVED** | Pull-to-refresh, Share functionality, Enhanced bookmarks, Smooth animations, 4-tab navigation |
+
+### ✅ Sprint 3 Features Implemented:
+
+#### 1. Search & Filter Functionality
+- ✅ Real-time search with 500ms debounce
+- ✅ Category filtering (Semua, Pro, Kontra, Netral)
+- ✅ Responsive UI with neumorphic design
+- ✅ Smooth animations and transitions
+
+#### 2. Offline Support
+- ✅ Offline-first caching with Room Database
+- ✅ Automatic cache on API success
+- ✅ Graceful fallback to cached data when offline
+- ✅ Cache management in Settings
+
+#### 3. Settings Screen
+- ✅ Dark mode toggle UI
+- ✅ Notifications toggle
+- ✅ Cache management with confirmation dialog
+- ✅ App version and license information
+
+#### 4. Enhanced Bookmark System
+- ✅ Bookmark button on each article card
+- ✅ Fully functional Bookmark screen
+- ✅ Delete functionality
+- ✅ Real-time state updates
+- ✅ Empty state UI
+
+#### 5. Bonus Features
+- ✅ **Pull-to-Refresh**: Swipe down to refresh on Home screen
+- ✅ **Share Functionality**: Share article URLs via Android share sheet
+- ✅ **Enhanced Bookmark Indicators**: Visual feedback on article cards
+- ✅ **Smooth Animations**: Shimmer loading and transitions
+- ✅ **4-Tab Navigation**: Home, Bookmark, Settings, About
 
 ---
 
