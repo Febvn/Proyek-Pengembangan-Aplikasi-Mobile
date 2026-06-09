@@ -26,6 +26,14 @@ This project was developed to fulfill the assignments for the **Mobile Applicati
 
 ---
 
+## Demo Video
+
+[![Demo Aplikasi News MBG](https://img.youtube.com/vi/UnIUC4MEWUs/0.jpg)](https://youtube.com/shorts/UnIUC4MEWUs?si=vAgK8P2Q-hwv2IJQ)
+
+> Klik gambar di atas untuk menonton demo aplikasi News MBG di YouTube.
+
+---
+
 ## App Screenshots / Tangkapan Layar Aplikasi
 
 Berikut adalah beberapa tampilan antarmuka dari aplikasi News MBG yang menggunakan desain Neumorphism yang modern:
